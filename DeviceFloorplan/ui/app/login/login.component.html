@@ -1,0 +1,44 @@
+<!--header-->
+<app-header></app-header>
+<!--content-->
+<div class="background bg-r">
+  <div class="row">
+    <div class="login-block">
+      <div class="bg-color border-radius form-head">DeviceFloorPlan</div>
+      <form class="login-form">
+        <div class="form-group mb-3">
+          <b>Username</b>
+          <input
+            type="text"
+            id="input"
+            class="login-input"
+            placeholder="User Email"
+            name="uaseName"
+            [(ngModel)]="userInputDetails.email"
+          />
+          <img src="../../assets/images/user-icon-human.jpg" id="input_img" />
+        </div>
+        <div class="form-group mt-0">
+          <b>Pasword</b>
+          <input
+            type="password"
+            id="input"
+            class="login-input"
+            name="password"
+            placeholder="Pasword"
+            [(ngModel)]="userInputDetails.password"
+          />
+          <img src="../../assets/images/lock-icon.png" id="input_img" />
+        </div>
+        <br />
+        <a
+          class="button-fullwidth login-btn bt-color-3 border-radius alt"
+          (click)="doLogin()"
+          >Login</a
+        >
+        <br /><br />
+        <a [routerLink]="['../registration']">registrer</a>
+      </form>
+    </div>
+  </div>
+</div>
